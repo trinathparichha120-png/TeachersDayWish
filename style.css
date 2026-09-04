@@ -328,10 +328,11 @@ input[type="file"]::file-selector-button:hover {
     font-size: 14px;
 }
 /* --- Link Output & Copy Button --- */
+/* --- Link Output, Copy & Share Buttons --- */
 .copy-box {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 #generatedLink {
@@ -346,7 +347,14 @@ input[type="file"]::file-selector-button:hover {
     outline: none;
 }
 
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
 .copy-action-btn {
+    flex: 1; /* Makes both buttons equal width */
     background-color: #1a1a1a;
     color: white;
     border: none;
@@ -360,4 +368,13 @@ input[type="file"]::file-selector-button:hover {
 
 .copy-action-btn:hover {
     background-color: #333;
+}
+
+/* Make the Share button pop with a vibrant color */
+.share-btn {
+    background-color: #C850C0;
+}
+
+.share-btn:hover {
+    background-color: #a03c9a;
 }
