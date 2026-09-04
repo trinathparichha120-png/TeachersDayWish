@@ -81,7 +81,26 @@ function copyToClipboard() {
         copyBtn.innerHTML = "✅ Copied!";
     });
 }
-
+// 3. Native Device Share Logic
+async function shareLink() {
+    const linkInput = document.getElementById("generatedLink").value;
+    
+    // Check if the browser supports the native share menu (most mobile phones do)
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: "Happy Teacher's Day!",
+                text: "I made a special Teacher's Day card just for you. Click here to open it:",
+                url: linkInput
+            });
+        } catch (error) {
+            console.log("User canceled the share process.");
+        }
+    } else {
+        // Fallback for desktop computers that don't have a share menu
+        alert("Direct sharing isn't supported on this browser. Please use the Copy button!");
+    }
+}
 // 3. Check the URL when the page loads
 window.onload = function() {
     const params = new URLSearchParams(window.location.search);
