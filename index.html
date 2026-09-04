@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 1. Add the Lottie Library here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+
+    <!-- Student Form Section (Remains the same) -->
+    <div id="creator-section" class="container">
+        <!-- ... (keep your existing form code here) ... -->
+        <h2>Create a Wish for Your Teacher</h2>
+        <label>Teacher's Name:</label>
+        <input type="text" id="teacherName" placeholder="e.g., Ravi Sir">
+        <label>Your Name (Student):</label>
+        <input type="text" id="studentName" placeholder="e.g., Trinath">
+        <label>Choose a Message:</label>
+        <select id="messageText">
+            <option value="Happy Teacher's Day! Thank you for guiding me and inspiring me every day.">Message 1: Short & Sweet</option>
+            <option value="To the world you may be just a teacher, but to your students, you are a hero. Happy Teacher's Day!">Message 2: Hero Teacher</option>
+            <option value="Thank you for being a light in my life and showing me the right path.">Message 3: Guiding Light</option>
+        </select>
+        <button onclick="generateLink()">Generate Link</button>
+        <div id="link-output" style="display: none;">
+            <p>Copy this link and send it to your teacher:</p>
+            <textarea id="generatedLink" readonly></textarea>
+        </div>
+    </div>
+
+    <!-- Teacher's Greeting Section (Updated) -->
+    <div id="greeting-section" class="container greeting-card" style="display: none; position: relative; overflow: hidden;">
+        
+        <!-- 2. Add the animation containers from DeepSeek -->
+        <div id="lottie-bg" class="lottie-bg"></div>
+        <div id="lottie-celebration" class="lottie-celebration"></div>
+
+        <!-- Ensure text sits above the animations -->
+        <div style="position: relative; z-index: 2;">
+            <h1 id="greetTeacherName"></h1>
+            <div class="card-body">
+                <p id="greetMessageText"></p>
+            </div>
+            <h3 id="greetStudentName"></h3>
+            <p class="footer-note">Happy Teacher's Day!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
