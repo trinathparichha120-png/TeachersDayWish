@@ -85,7 +85,10 @@
                     <p>🎉 Your link is ready! Share it on WhatsApp:</p>
                     <div class="copy-box">
                         <input type="text" id="generatedLink" readonly>
-                        <button type="button" id="copyBtn" onclick="copyToClipboard()" class="copy-action-btn">📋 Copy Link</button>
+                        <div class="action-buttons">
+                            <button type="button" id="copyBtn" onclick="copyToClipboard()" class="copy-action-btn">📋 Copy</button>
+                            <button type="button" id="shareBtn" onclick="shareLink()" class="copy-action-btn share-btn">📤 Share</button>
+                        </div>
                     </div>
                 </div>
 
